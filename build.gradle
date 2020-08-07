@@ -1,0 +1,47 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'arkham.knigt'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//implementation 'net.sourceforge.owlapi:owlapi-gwt:4.3.2.1'
+
+	//implementation 'net.sourceforge.owlapi:owllinkimpl:2.0.0'\
+
+	//compile group: 'net.sourceforge.owlapi', name: 'owlapi-distribution', version: '3.5.0'
+
+
+	compile group: 'net.sourceforge.owlapi', name: 'owlapi-distribution', version: '4.2.8'
+
+	//compile group: 'com.hermit-reasoner', name: 'org.semanticweb.hermit', version: '1.3.8.4'
+
+	// https://mvnrepository.com/artifact/com.hermit-reasoner/org.semanticweb.hermit
+	compile group: 'com.hermit-reasoner', name: 'org.semanticweb.hermit', version: '1.3.8.1'
+
+
+
+
+
+	//compile group: 'net.sourceforge.owlapi', name: 'owlapi-distribution', version: '3.4.3'
+
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
